@@ -45,10 +45,34 @@ function App() {
     const savedRecurrences = localStorage.getItem('meufluxo_recurrences')
     const savedBudgets = localStorage.getItem('meufluxo_budgets')
 
-    if (savedTransactions) setTransactions(JSON.parse(savedTransactions))
-    if (savedGoals) setGoals(JSON.parse(savedGoals))
-    if (savedRecurrences) setRecurrences(JSON.parse(savedRecurrences))
-    if (savedBudgets) setBudgets(JSON.parse(savedBudgets))
+    if (savedTransactions) {
+      setTransactions(JSON.parse(savedTransactions))
+      console.log('Transactions loaded:', JSON.parse(savedTransactions))
+    } else {
+      setTransactions([])
+      console.log('No transactions found, initializing empty array.')
+    }
+    if (savedGoals) {
+      setGoals(JSON.parse(savedGoals))
+      console.log('Goals loaded:', JSON.parse(savedGoals))
+    } else {
+      setGoals([])
+      console.log('No goals found, initializing empty array.')
+    }
+    if (savedRecurrences) {
+      setRecurrences(JSON.parse(savedRecurrences))
+      console.log('Recurrences loaded:', JSON.parse(savedRecurrences))
+    } else {
+      setRecurrences([])
+      console.log('No recurrences found, initializing empty array.')
+    }
+    if (savedBudgets) {
+      setBudgets(JSON.parse(savedBudgets))
+      console.log('Budgets loaded:', JSON.parse(savedBudgets))
+    } else {
+      setBudgets([])
+      console.log('No budgets found, initializing empty array.')
+    }
   }, [])
 
   // Salvar dados no localStorage

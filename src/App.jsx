@@ -77,19 +77,23 @@ function App() {
 
   // Salvar dados no localStorage
   useEffect(() => {
-    localStorage.setItem('meufluxo_transactions', JSON.stringify(transactions))
+    localStorage.setItem(\'meufluxo_transactions\', JSON.stringify(transactions))
+    console.log(\'Transactions saved:\', transactions)
   }, [transactions])
 
   useEffect(() => {
-    localStorage.setItem('meufluxo_goals', JSON.stringify(goals))
+    localStorage.setItem(\'meufluxo_goals\', JSON.stringify(goals))
+    console.log(\'Goals saved:\', goals)
   }, [goals])
 
   useEffect(() => {
-    localStorage.setItem('meufluxo_recurrences', JSON.stringify(recurrences))
+    localStorage.setItem(\'meufluxo_recurrences\', JSON.stringify(recurrences))
+    console.log(\'Recurrences saved:\', recurrences)
   }, [recurrences])
 
   useEffect(() => {
-    localStorage.setItem('meufluxo_budgets', JSON.stringify(budgets))
+    localStorage.setItem(\'meufluxo_budgets\', JSON.stringify(budgets))
+    console.log(\'Budgets saved:\', budgets)
   }, [budgets])
 
   // Calcular saldo atual
